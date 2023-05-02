@@ -20,7 +20,7 @@ public class UDPServer {
         serverSocket.receive(packet);
 
         // Create Datagram packet containing client data
-        strData = new String(packet.getData());
+        strData = new String(packet.getData()).toUpperCase();
         InetAddress IPAddress = packet.getAddress();
 
         PORT = packet.getPort();
